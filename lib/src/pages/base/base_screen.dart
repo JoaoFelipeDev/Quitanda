@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:quitanda/src/pages/home/home_tab.dart';
 
+import '../cart/cart_tab.dart';
+
 class BaseScreen extends StatefulWidget {
   BaseScreen({Key? key}) : super(key: key);
 
@@ -20,9 +22,7 @@ class _BaseScreenState extends State<BaseScreen> {
         controller: pageController,
         children: [
           HomeTab(),
-          Container(
-            color: Colors.yellow,
-          ),
+          CartTab(),
           Container(
             color: Colors.teal,
           ),
