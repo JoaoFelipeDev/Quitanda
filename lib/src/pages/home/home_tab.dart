@@ -1,4 +1,4 @@
-import 'package:badges/badges.dart';
+import 'package:badges/badges.dart' as badges;
 import 'package:flutter/material.dart';
 import 'package:quitanda/src/config/custom_colors.dart';
 import 'package:quitanda/src/config/app_data.dart' as appData;
@@ -53,8 +53,8 @@ class _HomeTabState extends State<HomeTab> {
             child: GestureDetector(
               onTap: () {},
               child: Badge(
-                badgeColor: CustomColors.customContrastColor,
-                badgeContent: const Text(
+                backgroundColor: CustomColors.customContrastColor,
+                label: const Text(
                   '2',
                   style: TextStyle(
                     color: Colors.white,
