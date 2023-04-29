@@ -2,6 +2,7 @@ import 'package:quitanda/src/models/cart_item_model.dart';
 import 'package:quitanda/src/models/user_model.dart';
 
 import '../models/item_model.dart';
+import '../models/order_model.dart';
 
 ItemModel apple = ItemModel(
   description:
@@ -89,3 +90,29 @@ UserModel user = UserModel(
     celular: '99 9999 99999',
     cpf: '999.999.999-99',
     senha: '');
+
+List<OrderModel> orders = [
+  OrderModel(
+    copyAndPaste: 'Aweas31465asdwd',
+    createdDateTime: DateTime.parse('2024-06-08 11:00:10.458'),
+    id: 'asd465546',
+    overdueDateTime: DateTime.now(),
+    status: 'pending_payment',
+    total: 11.0,
+    items: [
+      CartItemModel(item: apple, quantity: 2),
+      CartItemModel(item: mango, quantity: 1),
+    ],
+  ),
+  OrderModel(
+    copyAndPaste: '1234poi',
+    createdDateTime: DateTime.now(),
+    id: '789654',
+    overdueDateTime: DateTime.now(),
+    status: 'refunded',
+    total: 11.0,
+    items: [
+      CartItemModel(item: guava, quantity: 2),
+    ],
+  ),
+];
