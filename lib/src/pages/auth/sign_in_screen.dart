@@ -2,9 +2,9 @@ import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:quitanda/src/pages/auth/sign_up_screen.dart';
 import 'package:quitanda/src/config/custom_colors.dart';
+import '../common_widgets/custom_text_field.dart';
 
 import '../base/base_screen.dart';
-import 'components/custom_text_field.dart';
 
 class SignInScreen extends StatelessWidget {
   const SignInScreen({Key? key}) : super(key: key);
@@ -76,11 +76,11 @@ class SignInScreen extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
-                    CustomTextField(
+                    const CustomTextField(
                       icon: Icons.email,
                       label: 'Email',
                     ),
-                    CustomTextField(
+                    const CustomTextField(
                       icon: Icons.lock,
                       label: 'Senha',
                       isSecret: true,
@@ -152,9 +152,9 @@ class SignInScreen extends StatelessWidget {
                         },
                         // ignore: prefer_const_constructors
                         // ignore: sort_child_properties_last
-                        child: Text(
+                        child: const Text(
                           'Criar Conta',
-                          style: const TextStyle(fontSize: 18),
+                          style: TextStyle(fontSize: 18),
                         ),
                         style: OutlinedButton.styleFrom(
                           side: const BorderSide(
