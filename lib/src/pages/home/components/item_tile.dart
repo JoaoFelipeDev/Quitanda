@@ -6,12 +6,11 @@ import 'package:quitanda/src/services/utils_services.dart';
 import '../../../models/item_model.dart';
 
 class ItemTile extends StatelessWidget {
-  ItemTile({
-    super.key,
-    required this.item,
-  });
+  ItemTile({super.key, required this.item, required this.cartAnimationMethod});
 
   final ItemModel item;
+  final void Function(GlobalKey) cartAnimationMethod;
+  final GlobalKey imageGK = GlobalKey();
 
   final UtilServices utilServices = UtilServices();
 
@@ -42,7 +41,10 @@ class ItemTile extends StatelessWidget {
                   Expanded(
                     child: Hero(
                       tag: item.imgUrl,
-                      child: Image.asset(item.imgUrl),
+                      child: Image.asset(
+                        item.imgUrl,
+                        key: imageGK,
+                      ),
                     ),
                   ),
                   // nome
@@ -83,7 +85,9 @@ class ItemTile extends StatelessWidget {
           top: 4,
           right: 4,
           child: GestureDetector(
-            onTap: () {},
+            onTap: () {
+              cartAnimationMethod(imageGK);
+            },
             child: Container(
               height: 40,
               width: 35,

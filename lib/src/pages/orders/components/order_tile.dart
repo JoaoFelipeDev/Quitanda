@@ -95,15 +95,7 @@ class OrderTile extends StatelessWidget {
                       borderRadius: BorderRadius.circular(20),
                     ),
                   ),
-                  onPressed: () {
-                    showDialog(
-                        context: context,
-                        builder: (_) {
-                          return PaymentDialog(
-                            order: order,
-                          );
-                        });
-                  },
+                  onPressed: () {},
                   icon: const Icon(Icons.pix_sharp),
                   label: const Text('Ver QR code Pix'),
                 ),
